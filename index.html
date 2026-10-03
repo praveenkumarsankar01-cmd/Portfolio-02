@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link rel="preload" href="https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtq.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Upwork copy: the contact form is replaced by this note */
+.up-note p{color:var(--t2);line-height:1.7;margin:0 0 1.1rem}
+.up-note ul{list-style:none;margin:0 0 1.25rem;padding:0;display:grid;gap:.8rem}
+.up-note li{display:flex;align-items:center;gap:.7rem;color:var(--t1);font-weight:600}
+.up-note li .ic{color:var(--primary);font-size:1.05rem}
+.up-note .up-reply{color:var(--t3);font-size:.92rem;margin:0}
 /* Outfit (SIL Open Font License) from Google Fonts, declared here so the page no longer waits for Google's
    stylesheet. One variable-font file per character set covers every weight; Latin is preloaded above. */
 @font-face{font-family:'Outfit';font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJuktqQ4E.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
@@ -1896,18 +1902,15 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
       <div class="rv" data-d="100">
         <div class="cf-card glass-card">
           <h3 style="margin-bottom:1.75rem;">Let's Discuss Your Project</h3>
-          <form id="cForm">
-            <div class="f-row">
-              <div class="f-grp"><label class="f-lbl">Your Name</label><input type="text" id="fname" placeholder="John Doe" required></div>
-              <div class="f-grp"><label class="f-lbl">Email Address</label><input type="email" id="femail" placeholder="john@example.com" required></div>
-            </div>
-            <div class="f-grp"><label class="f-lbl">Service Required</label>
-              <select id="fservice"><option value="" disabled selected>Select a service...</option><option>Website Creation</option><option>Google Ads Management</option><option>Meta Ads Management</option><option>SEO & Analytics</option><option>Creative Design</option></select>
-            </div>
-            <div class="f-grp"><label class="f-lbl">Your Message</label><textarea id="fmsg" rows="5" placeholder="Tell me what you're working on and what kind of help you're looking for..." required></textarea></div>
-            <button type="submit" class="btn-sub"><span id="bTx">Send Message</span><i class="fas fa-paper-plane ic ic-paper-plane" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-paper-plane"/></svg></i><div class="btn-rip"></div></button>
-            <div id="fOk" class="f-ok hide"><i class="fas fa-check-circle ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i>Got it! I'll reply within 24 hours.</div>
-          </form>
+          <div class="up-note">
+            <p>To keep everything in one place, please send me a message on Upwork. It helps if you include:</p>
+            <ul>
+              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>What you need help with</span></li>
+              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>Your timeline</span></li>
+              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>A rough budget</span></li>
+            </ul>
+            <p class="up-reply">I usually reply within 24 hours.</p>
+          </div>
         </div>
       </div>
 
@@ -3312,56 +3315,6 @@ document.querySelectorAll('.service-card').forEach(card=>{
     card.querySelector('.service-bg').style.transform='scale(1.12) translate(0,0)';
   });
 });
-
-/* CONTACT FORM */
-const cForm=document.getElementById('cForm'),fOk=document.getElementById('fOk'),bTx=document.getElementById('bTx');
-const WEB3FORMS_KEY='XXXXX';
-const WHATSAPP_NUMBER='XXXXX';
-if(cForm){cForm.addEventListener('submit',async e=>{
-  e.preventDefault();
-  const btn=cForm.querySelector('.btn-sub');
-  const name=document.getElementById('fname').value.trim();
-  const email=document.getElementById('femail').value.trim();
-  const service=document.getElementById('fservice').value;
-  const msg=document.getElementById('fmsg').value.trim();
-  if(!name||!email||!msg){
-    btn.style.transform='translateX(-7px)';setTimeout(()=>btn.style.transform='',300);return;
-  }
-  bTx.textContent='Sending...';btn.disabled=true;
-  let emailOk=false;
-  try{
-    const res=await fetch('https://api.web3forms.com/submit',{
-      method:'POST',
-      headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify({
-        access_key:WEB3FORMS_KEY,
-        name:name,
-        email:email,
-        service:service||'Not specified',
-        message:msg,
-        subject:`New portfolio inquiry from ${name}`,
-        from_name:'Portfolio Contact Form',
-        replyto:email
-      })
-    });
-    const data=await res.json();
-    emailOk=!!data.success;
-  }catch(err){emailOk=false;}
-
-  // Open WhatsApp with a pre-filled message in a new tab
-  const waText=encodeURIComponent(`New inquiry from portfolio site:\n\nName: ${name}\nEmail: ${email}\nService: ${service||'Not specified'}\nMessage: ${msg}`);
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`,'_blank');
-
-  if(emailOk){
-    bTx.textContent='✓ Sent!';btn.style.background='linear-gradient(135deg,#10b981,#059669)';
-    fOk.innerHTML='<i class="fas fa-check-circle ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i>Got it! Email sent and WhatsApp opened — I\'ll reply within 24 hours.';
-  }else{
-    bTx.textContent='Sent via WhatsApp';btn.style.background='linear-gradient(135deg,#10b981,#059669)';
-    fOk.innerHTML='<i class="fas fa-check-circle ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i>WhatsApp opened — please send the message there. (Email delivery had an issue.)';
-  }
-  fOk.classList.remove('hide');cForm.reset();
-  setTimeout(()=>{bTx.textContent='Send Message';btn.disabled=false;btn.style.background='';fOk.classList.add('hide')},5000);
-})}
 
 /* BACK TO TOP */
 const btt=document.getElementById('btt');
