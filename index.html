@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link rel="preload" href="https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtq.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Upwork copy: stat rows with three items, and the contact row without the contact card and map */
+@media(min-width:901px){.pp-stats.pp-stats--3{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.pp-stats--3 .pp-stat:last-child{grid-column:1/-1}}
+.ct-wrap > .rv:first-child{align-self:start}
 /* Upwork copy: the contact form is replaced by this note */
 .up-note p{color:var(--t2);line-height:1.7;margin:0 0 1.1rem}
 .up-note ul{list-style:none;margin:0 0 1.25rem;padding:0;display:grid;gap:.8rem}
@@ -1259,7 +1263,6 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 }
 </style>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="dns-prefetch" href="https://maps.google.com">
 
 <style>
 /* ═══ SHOWCASE TABS ON PHONES ═════════════════════════════════════
@@ -1413,32 +1416,6 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 
   </div>
 
-  <!-- STATS BAR -->
-  <div class="stats-bar">
-    <div class="stats-inner">
-      <div class="stat-cell">
-        <div class="stat-ic-box"><i class="fas fa-briefcase ic ic-briefcase" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-briefcase"/></svg></i></div>
-        <div>
-          <div class="stat-val">30+</div>
-          <div class="stat-lbl">Projects Completed</div>
-        </div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-ic-box"><i class="fas fa-users ic ic-users" aria-hidden="true"><svg viewBox="0 0 640 512"><use href="#i-users"/></svg></i></div>
-        <div>
-          <div class="stat-val">10+</div>
-          <div class="stat-lbl">Happy Clients</div>
-        </div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-ic-box"><i class="fas fa-star ic ic-star" aria-hidden="true"><svg viewBox="0 0 576 512"><use href="#i-star"/></svg></i></div>
-        <div>
-          <div class="stat-val">4.8</div>
-          <div class="stat-lbl">Client Rating</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </section>
 
@@ -1454,7 +1431,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 
       <div class="ab-content rv">
         <h3>Hi, I'm <span class="grad-text">Praveen Kumar</span></h3>
-        <p>I'm a digital marketing specialist from Ambattur, Chennai. For the past 2 years, I've been working directly with small business owners — helping them get more enquiries, build a proper online presence, and run ads that don't burn through their budget.</p>
+        <p>I'm a digital marketing specialist from Chennai, India. For the past 2 years, I've been working directly with small business owners — helping them get more enquiries, build a proper online presence, and run ads that don't burn through their budget.</p>
         <p>My work covers four areas: building clean, fast websites that give visitors a reason to trust you; running Google Ads that target the right people at the right time; SEO to get you ranking on Google without paying per click; and design work that makes your brand look like it means business.</p>
         <div class="ab-hi">
           <div class="hi-item glass-card"><i class="fas fa-laptop-code ic ic-laptop-code" aria-hidden="true"><svg viewBox="0 0 640 512"><use href="#i-laptop-code"/></svg></i><div><h4>Website Creation</h4><p>Clean, fast sites that load well and look professional</p></div></div>
@@ -1499,7 +1476,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
         <div class="service-content">
           <div class="service-tags"><span class="service-tag">Fast Loading</span><span class="service-tag">Mobile-Ready</span><span class="service-tag">SEO Built-In</span></div>
           <h3 class="service-title">Website Creation</h3>
-          <p class="service-desc">I build fast, professional websites that visitors trust instantly. Clean design + mobile-friendly + SEO-ready. Sites that convert browsers into leads. Average: 40% increase in enquiries within 90 days.</p>
+          <p class="service-desc">I build fast, professional websites that visitors trust instantly. Clean design + mobile-friendly + SEO-ready. Sites that convert browsers into leads.</p>
           <a href="#contact" class="service-btn">Let's Build It <i class="fas fa-arrow-right ic ic-arrow-right" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-arrow-right"/></svg></i></a>
         </div>
       </div>
@@ -1512,7 +1489,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
         <div class="service-content">
           <div class="service-tags"><span class="service-tag">ROI Focused</span><span class="service-tag">Real Tracking</span><span class="service-tag">Budget Smart</span></div>
           <h3 class="service-title">Ads Management</h3>
-          <p class="service-desc">Google Ads + Meta Ads that actually work. Smart targeting + constant optimization + full transparency. No guessing games. Every rupee tracked. Average ROI: 4-5x return on ad spend within 60 days.</p>
+          <p class="service-desc">Google Ads + Meta Ads that actually work. Smart targeting + constant optimization + full transparency. No guessing games. Every rupee tracked.</p>
           <a href="#contact" class="service-btn">Let's Talk Ads <i class="fas fa-arrow-right ic ic-arrow-right" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-arrow-right"/></svg></i></a>
         </div>
       </div>
@@ -1525,7 +1502,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
         <div class="service-content">
           <div class="service-tags"><span class="service-tag">Rankings</span><span class="service-tag">Organic Traffic</span><span class="service-tag">Long-Term</span></div>
           <h3 class="service-title">SEO & Analytics</h3>
-          <p class="service-desc">Get found on Google without paying per click. On-page SEO, technical fixes, keyword strategy + monthly reporting. Goal: 1st page rankings in 90-180 days. Average: 250%+ organic traffic increase in 6 months.</p>
+          <p class="service-desc">Get found on Google without paying per click. On-page SEO, technical fixes, keyword strategy + monthly reporting.</p>
           <a href="#contact" class="service-btn">Improve My Ranking <i class="fas fa-arrow-right ic ic-arrow-right" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-arrow-right"/></svg></i></a>
         </div>
       </div>
@@ -1698,7 +1675,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 <!-- PROJECTS -->
 <section id="projects" class="section projects">
   <div class="container">
-    <div class="sec-hd rv"><span class="eyebrow">Portfolio</span><h2 class="sec-title">Work I've <span class="grad-text">Done</span></h2><p class="sec-sub">Real projects for real clients — with actual results attached.</p></div>
+    <div class="sec-hd rv"><span class="eyebrow">Portfolio</span><h2 class="sec-title">Work I've <span class="grad-text">Done</span></h2><p class="sec-sub">Real projects for real clients.</p></div>
     <div class="pj-grid">
       <div class="pj-card rv" data-d="0">
         <div class="pj-img"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop&auto=format&q=70" alt="Business Website Creation" loading="lazy" decoding="async"><div class="pj-ov"></div><div class="pj-tags"><span class="pj-tag">DESIGN</span><span class="pj-tag">DEV</span></div></div>
@@ -1706,7 +1683,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
       </div>
       <div class="pj-card rv" data-d="100">
         <div class="pj-img"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&auto=format&q=70" alt="Paid Advertising Mastery" loading="lazy" decoding="async"><div class="pj-ov"></div><div class="pj-tags"><span class="pj-tag">Google Ads</span><span class="pj-tag">Meta Ads</span></div></div>
-        <div class="pj-body"><h3 class="pj-title">Google & Meta Ads Management</h3><p class="pj-desc">Ran Google & Meta ad campaigns for a local business that was spending money on ads with nothing to show for it. After restructuring the targeting and messaging, their cost-per-lead dropped by 60% and monthly enquiries tripled — within the first 90 days.</p><div class="pj-meta"><span class="pj-tech"><i class="fas fa-dollar-sign ic ic-dollar-sign" aria-hidden="true"><svg viewBox="0 0 320 512"><use href="#i-dollar-sign"/></svg></i>Budget Optimised</span><span class="pj-tech"><i class="fas fa-bullseye ic ic-bullseye" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-bullseye"/></svg></i>Targeted</span></div><div class="pj-acts"><button class="pj-btn pri" onclick="openAdsShowcase()"><i class="fas fa-arrow-right ic ic-arrow-right" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-arrow-right"/></svg></i>View Project</button><button class="pj-btn sec"><i class="fas fa-chart-bar ic ic-chart-bar" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-chart-bar"/></svg></i>See Results</button></div></div>
+        <div class="pj-body"><h3 class="pj-title">Google & Meta Ads Management</h3><p class="pj-desc">Ran Google & Meta ad campaigns for a local business that was spending money on ads with nothing to show for it. I restructured the targeting and messaging so the budget went to the people most likely to enquire.</p><div class="pj-meta"><span class="pj-tech"><i class="fas fa-dollar-sign ic ic-dollar-sign" aria-hidden="true"><svg viewBox="0 0 320 512"><use href="#i-dollar-sign"/></svg></i>Budget Optimised</span><span class="pj-tech"><i class="fas fa-bullseye ic ic-bullseye" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-bullseye"/></svg></i>Targeted</span></div><div class="pj-acts"><button class="pj-btn pri" onclick="openAdsShowcase()"><i class="fas fa-arrow-right ic ic-arrow-right" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-arrow-right"/></svg></i>View Project</button><button class="pj-btn sec"><i class="fas fa-chart-bar ic ic-chart-bar" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-chart-bar"/></svg></i>See Results</button></div></div>
       </div>
       <div class="pj-card rv" data-d="200">
         <div class="pj-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&auto=format&q=70" alt="E-Commerce SEO Campaign" loading="lazy" decoding="async"><div class="pj-ov"></div><div class="pj-tags"><span class="pj-tag">SEO</span><span class="pj-tag">Analytics</span></div></div>
@@ -1810,27 +1787,24 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
   <div class="container">
     <div class="sec-hd rv"><span class="eyebrow">Let's Talk</span><h2 class="sec-title">Got a Project <span class="grad-text">in Mind?</span></h2><p class="sec-sub">Tell me what you're working on. If I can help, I'll be honest about it. If I can't, I'll tell you that too.</p></div>
     <div class="ct-wrap">
+
+      <!-- FAQ SECTION -->
       <div class="rv">
-        <div class="ci-card glass-card">
-          <h3>Get In Touch</h3>
-          <p>Quick response guaranteed. Send a message or call directly — I'll get back to you within 24 hours, usually much faster.</p>
-          <div class="c-details">
-            <div class="c-item"><div class="c-icon"><i class="fab fa-whatsapp ic ic-b-whatsapp" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-b-whatsapp"/></svg></i></div><div><strong>WhatsApp (Quick)</strong><a href="https://wa.me/XXXXX" style="color:var(--primary);text-decoration:none;font-weight:600;">+91 XXXXX XXXXX</a></div></div>
-            <div class="c-item"><div class="c-icon"><i class="fas fa-phone ic ic-phone" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-phone"/></svg></i></div><div><strong>Phone</strong><a href="tel:XXXXX" style="color:var(--primary);text-decoration:none;font-weight:600;">+91 XXXXX XXXXX</a></div></div>
-            <div class="c-item"><div class="c-icon"><i class="fas fa-envelope ic ic-envelope" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-envelope"/></svg></i></div><div><strong>Email</strong><a href="mailto:XXXXX">XXXXX@XXXXX.com</a></div></div>
-            <div class="c-item"><div class="c-icon"><i class="fas fa-map-marker-alt ic ic-location-dot" aria-hidden="true"><svg viewBox="0 0 384 512"><use href="#i-location-dot"/></svg></i></div><div><strong>Location</strong><span>Ambattur, Chennai 600053<br>Tamil Nadu, India</span></div></div>
-          </div>
-          <div class="c-socs">
-            <a href="#" class="c-soc"><i class="fab fa-linkedin-in ic ic-b-linkedin-in" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-b-linkedin-in"/></svg></i></a>
-            <a href="#" class="c-soc"><i class="fab fa-twitter ic ic-b-twitter" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-b-twitter"/></svg></i></a>
-            <a href="#" class="c-soc"><i class="fab fa-instagram ic ic-b-instagram" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-b-instagram"/></svg></i></a>
-            <a href="#" class="c-soc"><i class="fab fa-github ic ic-b-github" aria-hidden="true"><svg viewBox="0 0 496 512"><use href="#i-b-github"/></svg></i></a>
+        <div class="cf-card glass-card">
+          <h3 style="margin-bottom:1.75rem;">Let's Discuss Your Project</h3>
+          <div class="up-note">
+            <p>To keep everything in one place, please send me a message on Upwork. It helps if you include:</p>
+            <ul>
+              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>What you need help with</span></li>
+              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>Your timeline</span></li>
+              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>A rough budget</span></li>
+            </ul>
+            <p class="up-reply">I usually reply within 24 hours.</p>
           </div>
         </div>
       </div>
 
-      <!-- FAQ SECTION -->
-      <div class="rv" data-d="50">
+      <div class="rv" data-d="100">
         <div class="cf-card glass-card">
           <h3 style="margin-bottom:1.75rem;">Common Questions Answered</h3>
           <div class="faq-container">
@@ -1899,34 +1873,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
         </div>
       </div>
 
-      <div class="rv" data-d="100">
-        <div class="cf-card glass-card">
-          <h3 style="margin-bottom:1.75rem;">Let's Discuss Your Project</h3>
-          <div class="up-note">
-            <p>To keep everything in one place, please send me a message on Upwork. It helps if you include:</p>
-            <ul>
-              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>What you need help with</span></li>
-              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>Your timeline</span></li>
-              <li><i class="ic ic-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-circle-check"/></svg></i><span>A rough budget</span></li>
-            </ul>
-            <p class="up-reply">I usually reply within 24 hours.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="rv" data-d="150">
-        <div class="cf-card glass-card map-card">
-          <h3 style="margin-bottom:.35rem;">Where I'm Based</h3>
-          <p class="map-sub">Ambattur, Chennai 600053 &middot; Tamil Nadu, India</p>
-          <div class="map-frame">
-            <iframe
-              src="https://maps.google.com/maps?q=13.1185879,80.1574261&amp;z=14&amp;output=embed"
-              title="Map showing Ambattur, Chennai 600053, Tamil Nadu, India"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -1950,7 +1897,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
       <div class="ft-links">
         <div class="ft-col"><h4>Navigation</h4><a href="#about">About Me</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#experience">Experience</a></div>
         <div class="ft-col"><h4>Services</h4><a href="#services">Website Creation</a><a href="#services">Google & Meta Ads</a><a href="#services">SEO & Analytics</a><a href="#services">Creative Design</a></div>
-        <div class="ft-col"><h4>Connect</h4><a href="mailto:XXXXX">Email Me</a><a href="#">Download CV</a><a href="#">LinkedIn</a><a href="#contact">Contact</a></div>
+        <div class="ft-col"><h4>Connect</h4><a href="#">Download CV</a><a href="#">LinkedIn</a><a href="#contact">Contact</a></div>
       </div>
     </div>
     <div class="ft-div"></div>
@@ -2226,11 +2173,10 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
         <div class="pp-live"><a href="https://vynox-menswear.vercel.app/" target="_blank" rel="noopener" class="btn-glow"><i class="fas fa-external-link-alt ic ic-up-right-from-square" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-up-right-from-square"/></svg></i>Visit Live Website</a></div>
 
         <!-- Stats -->
-        <div class="pp-stats">
+        <div class="pp-stats pp-stats--3">
           <div class="pp-stat"><div class="pp-stat-val">100%</div><div class="pp-stat-lbl">Mobile Responsive</div></div>
           <div class="pp-stat"><div class="pp-stat-val">&lt;2s</div><div class="pp-stat-lbl">Page Load Speed</div></div>
           <div class="pp-stat"><div class="pp-stat-val">A+</div><div class="pp-stat-lbl">Performance Score</div></div>
-          <div class="pp-stat"><div class="pp-stat-val">3×</div><div class="pp-stat-lbl">Lead Conversion Rate</div></div>
         </div>
 
         <!-- Design & UX -->
@@ -2562,13 +2508,6 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 
       <div class="seo-wrap">
 
-        <!-- Stats -->
-        <div class="seo-stats">
-          <div class="seo-stat"><div class="seo-stat-val">40%+</div><div class="seo-stat-lbl">Organic Traffic Growth</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">15+</div><div class="seo-stat-lbl">Keywords Ranked</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">&lt;2s</div><div class="seo-stat-lbl">Core Web Vitals LCP</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">100%</div><div class="seo-stat-lbl">On-Page Coverage</div></div>
-        </div>
 
         <!-- Real Screenshot -->
         <div class="seo-img-block">
@@ -2608,23 +2547,6 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
           </div>
         </div>
 
-        <!-- Results -->
-        <div class="seo-result-card">
-          <div class="seo-sh"><div class="seo-sh-ic"><i class="fas fa-trophy ic ic-trophy" aria-hidden="true"><svg viewBox="0 0 576 512"><use href="#i-trophy"/></svg></i></div><h3>Campaign Results & Impact</h3></div>
-          <p>The combined technical and on-page SEO implementation for Vynox Men's Wear delivered measurable improvements in organic search performance. Product pages began ranking for buyer-intent keywords in the fashion segment, driving qualified organic traffic from users actively searching for menswear products.</p>
-          <div class="seo-result-grid">
-            <div class="seo-result-item"><i class="fas fa-chart-line ic ic-chart-line" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-chart-line"/></svg></i><h4>Traffic Growth</h4><p>40%+ increase in organic sessions within the first 60 days of full SEO rollout</p></div>
-            <div class="seo-result-item"><i class="fas fa-search ic ic-magnifying-glass" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-magnifying-glass"/></svg></i><h4>Keyword Rankings</h4><p>15+ target keywords indexed and ranking on page 1–2 of Google search results</p></div>
-            <div class="seo-result-item"><i class="fas fa-mobile-alt ic ic-mobile-screen-button" aria-hidden="true"><svg viewBox="0 0 384 512"><use href="#i-mobile-screen-button"/></svg></i><h4>Mobile Performance</h4><p>Core Web Vitals passing grade across mobile — critical for India's mobile-first audience</p></div>
-          </div>
-          <div class="seo-techs">
-            <span class="seo-tech"><i class="fab fa-google ic ic-b-google" aria-hidden="true"><svg viewBox="0 0 488 512"><use href="#i-b-google"/></svg></i>Google Search Console</span>
-            <span class="seo-tech"><i class="fas fa-chart-bar ic ic-chart-bar" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-chart-bar"/></svg></i>Semrush</span>
-            <span class="seo-tech"><i class="fas fa-code ic ic-code" aria-hidden="true"><svg viewBox="0 0 640 512"><use href="#i-code"/></svg></i>Schema Markup</span>
-            <span class="seo-tech"><i class="fas fa-tachometer-alt ic ic-gauge-high" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-gauge-high"/></svg></i>Core Web Vitals</span>
-            <span class="seo-tech"><i class="fab fa-html5 ic ic-b-html5" aria-hidden="true"><svg viewBox="0 0 384 512"><use href="#i-b-html5"/></svg></i>HTML5 / CSS3</span>
-          </div>
-        </div>
 
         <!-- CTA -->
         <div class="seo-ctas">
@@ -2663,13 +2585,6 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 
       <div class="seo-wrap">
 
-        <!-- Stats -->
-        <div class="seo-stats">
-          <div class="seo-stat"><div class="seo-stat-val">Maps</div><div class="seo-stat-lbl">Google Local Pack Visibility</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">25+</div><div class="seo-stat-lbl">Medical Keywords Ranked</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">3×</div><div class="seo-stat-lbl">Enquiry Volume Increase</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">100%</div><div class="seo-stat-lbl">NAP Consistency</div></div>
-        </div>
 
         <!-- Real Screenshot -->
         <div class="seo-img-block">
@@ -2709,23 +2624,6 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
           </div>
         </div>
 
-        <!-- Results -->
-        <div class="seo-result-card">
-          <div class="seo-sh"><div class="seo-sh-ic"><i class="fas fa-trophy ic ic-trophy" aria-hidden="true"><svg viewBox="0 0 576 512"><use href="#i-trophy"/></svg></i></div><h3>Campaign Results & Patient Impact</h3></div>
-          <p>The local SEO strategy for Alpha Clinic produced tangible improvements in both search visibility and patient enquiry volume. The clinic achieved placement in Google's local map pack for key Kodambakkam healthcare searches, and the structured on-page optimisation drove a significant increase in appointment form submissions from organic traffic.</p>
-          <div class="seo-result-grid">
-            <div class="seo-result-item"><i class="fas fa-map-marker-alt ic ic-location-dot" aria-hidden="true"><svg viewBox="0 0 384 512"><use href="#i-location-dot"/></svg></i><h4>Local Pack Ranking</h4><p>Clinic appearing in Google Maps local pack for high-intent Chennai healthcare searches</p></div>
-            <div class="seo-result-item"><i class="fas fa-calendar-plus ic ic-calendar-plus" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-calendar-plus"/></svg></i><h4>3× Enquiry Volume</h4><p>Appointment enquiry submissions tripled compared to pre-SEO baseline measurement</p></div>
-            <div class="seo-result-item"><i class="fas fa-search ic ic-magnifying-glass" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-magnifying-glass"/></svg></i><h4>25+ Keywords Ranked</h4><p>Medical and local service keywords ranking across page 1 and 2 of Google results</p></div>
-          </div>
-          <div class="seo-techs">
-            <span class="seo-tech"><i class="fab fa-google ic ic-b-google" aria-hidden="true"><svg viewBox="0 0 488 512"><use href="#i-b-google"/></svg></i>Google Search Console</span>
-            <span class="seo-tech"><i class="fab fa-google ic ic-b-google" aria-hidden="true"><svg viewBox="0 0 488 512"><use href="#i-b-google"/></svg></i>Google Business Profile</span>
-            <span class="seo-tech"><i class="fas fa-map-marker-alt ic ic-location-dot" aria-hidden="true"><svg viewBox="0 0 384 512"><use href="#i-location-dot"/></svg></i>Local Schema</span>
-            <span class="seo-tech"><i class="fas fa-chart-bar ic ic-chart-bar" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-chart-bar"/></svg></i>Semrush</span>
-            <span class="seo-tech"><i class="fas fa-tachometer-alt ic ic-gauge-high" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-gauge-high"/></svg></i>Core Web Vitals</span>
-          </div>
-        </div>
 
         <!-- CTA -->
         <div class="seo-ctas">
@@ -2764,13 +2662,6 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 
       <div class="seo-wrap">
 
-        <!-- Stats -->
-        <div class="seo-stats">
-          <div class="seo-stat"><div class="seo-stat-val">2</div><div class="seo-stat-lbl">Client Sites Audited</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">50+</div><div class="seo-stat-lbl">SEO Issues Fixed</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">100%</div><div class="seo-stat-lbl">Core Web Vitals Pass</div></div>
-          <div class="seo-stat"><div class="seo-stat-val">2×</div><div class="seo-stat-lbl">Avg. Organic Visibility</div></div>
-        </div>
 
         <!-- Real Screenshot -->
         <div class="seo-img-block">
@@ -2805,7 +2696,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
             </div>
             <div class="seo-features">
               <div class="seo-feat"><div class="seo-feat-ic"><i class="fas fa-lock ic ic-lock" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="#i-lock"/></svg></i></div><div class="seo-feat-txt"><h4>Mixed Content (HTTP/HTTPS) Warnings</h4><p>All HTTP resource references identified and updated to HTTPS — eliminating browser security warnings, ensuring full SSL certificate coverage, and maintaining Google's HTTPS ranking signal across both sites.</p></div></div>
-              <div class="seo-feat"><div class="seo-feat-ic"><i class="fas fa-compress-arrows-alt ic ic-minimize" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-minimize"/></svg></i></div><div class="seo-feat-txt"><h4>Image Compression & Format Upgrade</h4><p>All oversized images compressed and converted to WebP format where supported — reducing total page weight by 40–60%, dramatically improving mobile load times and Core Web Vitals scores across both websites.</p></div></div>
+              <div class="seo-feat"><div class="seo-feat-ic"><i class="fas fa-compress-arrows-alt ic ic-minimize" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-minimize"/></svg></i></div><div class="seo-feat-txt"><h4>Image Compression & Format Upgrade</h4><p>All oversized images compressed and converted to WebP format where supported — reducing total page weight and improving mobile load times and Core Web Vitals scores across both websites.</p></div></div>
             </div>
           </div>
         </div>
@@ -2891,55 +2782,7 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 
       <div class="pp-wrap">
 
-        <!-- Stats -->
-        <div class="pp-stats">
-          <div class="pp-stat"><div class="pp-stat-val">44.5K</div><div class="pp-stat-lbl">Audience Reach</div></div>
-          <div class="pp-stat"><div class="pp-stat-val">863</div><div class="pp-stat-lbl">Link Clicks</div></div>
-          <div class="pp-stat"><div class="pp-stat-val">+103%</div><div class="pp-stat-lbl">Growth Rate</div></div>
-          <div class="pp-stat"><div class="pp-stat-val">Real-Time</div><div class="pp-stat-lbl">Campaign Tracking</div></div>
-        </div>
 
-        <!-- Premium Dashboard Showcases -->
-        <div class="pp-full">
-          <div class="pp-badge"><i class="fas fa-chart-bar ic ic-chart-bar" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-chart-bar"/></svg></i> Live Campaign Performance — Real-Time Dashboards</div>
-
-          <!-- Meta Ads Dashboard Block -->
-          <div class="pds-block">
-            <div class="pds-label-row">
-              <span class="pds-platform-badge pds-meta"><i class="fab fa-facebook ic ic-b-facebook" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="#i-b-facebook"/></svg></i> Meta Ads</span>
-              <h3 class="pds-title">Sniper – Meta Ads Dashboard</h3>
-            </div>
-            <div class="pds-img-wrap">
-              <img decoding="async" loading="lazy" data-src="assets/design-1.jpg" alt="Sniper Meta Ads Dashboard" class="pds-img">
-            </div>
-            <p class="pds-desc">Managed and optimized Meta advertising campaigns focused on audience targeting, retargeting strategies, conversion optimization, and ROAS improvement. Campaign structures were designed to improve engagement, website purchases, and customer retention across multiple audience segments.</p>
-            <div class="pds-metrics">
-              <div class="pds-metric"><span class="pds-metric-val">3.42×</span><span class="pds-metric-lbl">Overall ROAS</span></div>
-              <div class="pds-metric"><span class="pds-metric-val">4.82×</span><span class="pds-metric-lbl">Best Campaign ROAS</span></div>
-              <div class="pds-metric"><span class="pds-metric-val">₹8,51,920</span><span class="pds-metric-lbl">Total Revenue</span></div>
-              <div class="pds-metric"><span class="pds-metric-val">₹276</span><span class="pds-metric-lbl">Avg. Cost/Purchase</span></div>
-            </div>
-          </div>
-
-          <!-- Google Ads Dashboard Block -->
-          <div class="pds-block">
-            <div class="pds-label-row">
-              <span class="pds-platform-badge pds-google"><i class="fab fa-google ic ic-b-google" aria-hidden="true"><svg viewBox="0 0 488 512"><use href="#i-b-google"/></svg></i> Google Ads</span>
-              <h3 class="pds-title">Sniper – Google Ads Dashboard</h3>
-            </div>
-            <div class="pds-img-wrap">
-              <img decoding="async" loading="lazy" data-src="assets/design-2.jpg" alt="Sniper Google Ads Dashboard" class="pds-img">
-            </div>
-            <p class="pds-desc">Executed Google Ads campaigns including Search, Shopping, and Performance Max campaigns focused on conversion growth, keyword optimization, and scalable acquisition strategies. Performance tracking and analytics were used to maximize ROAS and campaign efficiency.</p>
-            <div class="pds-metrics">
-              <div class="pds-metric"><span class="pds-metric-val">4.24×</span><span class="pds-metric-lbl">Overall ROAS</span></div>
-              <div class="pds-metric"><span class="pds-metric-val">1,642</span><span class="pds-metric-lbl">Total Conversions</span></div>
-              <div class="pds-metric"><span class="pds-metric-val">₹11,09,874</span><span class="pds-metric-lbl">Conv. Value</span></div>
-              <div class="pds-metric"><span class="pds-metric-val">3.87%</span><span class="pds-metric-lbl">Click-Through Rate</span></div>
-            </div>
-          </div>
-
-        </div><!-- /premium dashboards -->
 
         <!-- Strategy Breakdown -->
         <div class="pp-full">
@@ -3014,10 +2857,9 @@ footer{background:var(--bg1);border-top:1px solid var(--glass-b);position:relati
 
       <div class="pp-wrap">
         <!-- Stats -->
-        <div class="pp-stats">
+        <div class="pp-stats pp-stats--3">
           <div class="pp-stat"><div class="pp-stat-val">6+</div><div class="pp-stat-lbl">Banner Designs</div></div>
           <div class="pp-stat"><div class="pp-stat-val">6</div><div class="pp-stat-lbl">Logo Designs</div></div>
-          <div class="pp-stat"><div class="pp-stat-val">100%</div><div class="pp-stat-lbl">Client Satisfaction</div></div>
           <div class="pp-stat"><div class="pp-stat-val">Multi</div><div class="pp-stat-lbl">Platform Ready</div></div>
         </div>
 
